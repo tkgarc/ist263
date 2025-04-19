@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@
             border-radius: 10px;
         }
         .row2 {
+            display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
@@ -47,13 +48,13 @@
             border-radius: 5px;
         }
         button {
-            background-color: #007bff;
-            color: white;
+            background-color: #696969;
+            color: #ffffff;
             border: none;
             cursor: pointer;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #696969;
         }
         .maps {
             width: 100%;
@@ -81,18 +82,17 @@
     </style>
 </head>
 <body>
-
     <a href="#main" class="skip">Skip to main content</a>
-
+    
     <nav class="nav">  
         <a href="index.html">Home</a><span>|</span>
         <a href="skillsupdatecopy.html">Skills</a><span>|</span> 
         <a href="contactupdate.html">Contact</a>
     </nav>
 
-    <main id="main">
-        <h1>Contact</h1> 
-
+    <h1>Contact</h1> 
+<section id="main">
+    <section id="contact-info">
         <div class="row1">
             <div class="address">
                 <p>Terina Garcia</p>
@@ -100,39 +100,37 @@
                 <p>619 Comstock Ave, Syracuse, NY 13210</p>
             </div>
             <div class="links">
-                <p><a href="mailto:tkgarcia@syr.edu">tkgarcia@syr.edu</a></p>
-                <p><a href="https://www.linkedin.com/in/terina-garcia/">My LinkedIn Profile</a></p>
-                <img src="../images/logo-sized.png" alt="LinkedIn Logo">
+                <p><a href="mailto:tkgarcia@syr.edu">Email me</a></p>
+                <p><a href="https://www.linkedin.com/in/terina-garcia/">View my LinkedIn profile</a></p>
+                <img src="../images/logo-sized.png" alt="LinkedIn logo"> 
             </div>
         </div>
-
+    </section>
+</section>
+    <section id="comments-form">
         <div class="row2">
             <div class="comments">
+                <label for="options">Was this page useful?</label>
+                <select name="options" id="options">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="not sure">Not sure</option>
+                </select>
                 <form action="https://formspree.io/f/mqaelazj" method="POST">
-                    <label for="options">Was this page useful?</label>
-                    <select name="options" id="options">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                        <option value="not sure">Not sure</option>
-                    </select>
-
                     <label for="comments">Questions/comments:</label>
                     <textarea id="comments" name="comments"></textarea>
-
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-
+                    <input type="email" name="email" id="email" required>
                     <button type="submit">Send</button>
                 </form>
             </div>
-        </main>
             <div class="maps">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5832.151849844271!2d-76.12973029999999!3d43.039834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f30ad2ba8231%3A0x1ae00b64fed0090f!2sErnie%20Davis%20Hall%2C%20619%20Comstock%20Ave%2C%20Syracuse%2C%20NY%201321">
-                </iframe>
-            </div> 
-        </div> 
-    </main> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5832.151849844271!2d-76.12973029999999!3d43.039834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f30ad2ba8231%3A0x1ae00b64fed0090f!2sErnie%20Davis%20Hall%2C%20619%20Comstock%20Ave%2C%20Syracuse%2C%20NY%2013210!5e0!3m2!1sen!2sus!4v1738191299966!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Google Maps location of Ernie Davis Hall, Syracuse University"></iframe>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+
+
 

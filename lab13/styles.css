@@ -1,10 +1,10 @@
 body {
     background-color: #fceee9;
-    color: #667b68;
+    color: #696969;
     font-family: Arial, sans-serif;}
-h1, h2, h3, h4, h5, h6 {color: #a3b899;}
+h1, h2, h3, h4, h5, h6 {color: #696969;}
 
-a {color: #667b68;text-decoration: none;}
+a {color: #696969;text-decoration: none;}
 
 a:hover {text-decoration: underline;}
 
@@ -17,12 +17,12 @@ nav {
     margin-bottom: 30px;}
 
 nav a {
-    color: #667b68;
+    color: #696969;
     text-decoration: none;
     padding: 5px;}
 
 nav a:hover {
-    background-color: #667b68;
+    background-color: #696969;
     color: #fceee9;}
 
 .site-nav {
@@ -30,12 +30,12 @@ nav a:hover {
     padding: 10px;}
 
 .site-nav a {
-    color: #667b68;
+    color: #696969;
     text-decoration: none;
     padding: 5px;}
 
 .site-nav a:hover {
-    background-color: #667b68;
+    background-color: #696969;
     color: #fceee9;}
 
 @media (max-width: 768px) {
