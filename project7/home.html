@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony - Where Movies & Music Sync</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #d14444;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #f5f2f2;
+      color: #d14444;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    .intro-box {
+  border: 3px solid #d14444;
+  background-color: #fffafa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(209, 68, 68, 0.2);
+  margin-bottom: 2rem;
+}
+
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #fce1e1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background-color: #d14444;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover, nav a:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-container img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      height: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h1, h2, h3 {
+      margin: 1rem 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .pairings {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .pairings:hover {
+      transform: translateY(-5px);
+    }
+
+    .pairing-item {
+      margin-bottom: 1rem;
+      color: #d14444;
+      padding: 0.5rem;
+      border-bottom: 1px solid #f3cccc;
+    }
+
+    .pairing-item:last-child {
+      border-bottom: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes gentle-bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .bounce {
+        animation: gentle-bounce 2s ease infinite;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav li {
+        margin: 0.5rem 0;
+      }
+
+      .logo-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo-container img {
+        max-width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="hero" role="banner">
+    <h1 class="bounce">Harmony</h1>
+    <p>Where movies & music sync!</p>
+  </header>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="home.html" aria-current="page">Home</a></li>
+      <li><a href="pagetwo.html">Movie Genres</a></li>
+      <li><a href="pagethree.html">Fun Extras</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="logo-container">
+      <img src="media/harmony-logo.jpg" alt="Harmony Logo featuring musical notes and film reel" />
+      <img src="media/harmony-logo2.jpg" alt="Secondary Harmony Logo showing the connection between film and music" />
+    </section>
+
+    <section class="introduction">
+        <div class="intro-box">
+          <p>Welcome to...</p>
+          <h1>Harmony: Where movies & music sync!</h1>
+          <p>
+            Have you ever watched a movie and thought, "This scene would be perfect with that song"?
+            You're not alone! Here, we celebrate the art of matching films with tracks that capture their essence.
+          </p>
+        </div>
+      </section>
+
+    <section class="featured">
+      <h2>Featured Pairings:</h2>
+
+      <div class="pairings">
+        <article class="pairing-item">
+          <p><strong><a href="https://www.imdb.com/title/tt0332280/" target="_blank" rel="noopener noreferrer">The Notebook (2004)</a></strong> → <a href="https://www.youtube.com/watch?v=jSPpbOGnFgk" target="_blank" rel="noopener noreferrer">♬ <em>Be My Baby</em> – The Ronettes</a></p>
+        </article>
+        <article class="pairing-item">
+          <p><strong><a href="https://www.imdb.com/title/tt0338013/" target="_blank" rel="noopener noreferrer">Eternal Sunshine of the Spotless Mind (2004)</a></strong> → <a href="https://www.youtube.com/watch?v=5D2u3ASuelQ" target="_blank" rel="noopener noreferrer">♬ <em>Alison</em> – Slowdive</a></p>
+        </article>
+        <article class="pairing-item">
+          <p><strong><a href="https://www.imdb.com/title/tt1022603/" target="_blank" rel="noopener noreferrer">500 Days of Summer (2009)</a></strong> → <a href="https://www.youtube.com/watch?v=w3qPMe_cCJk" target="_blank" rel="noopener noreferrer">♬ <em>Please, Please, Please Let Me Get What I Want</em> – The Smiths</a></p>
+        </article>
+        <article class="pairing-item">
+          <p><strong><a href="https://www.imdb.com/title/tt1343092/" target="_blank" rel="noopener noreferrer">The Great Gatsby (2013)</a></strong> → <a href="https://www.youtube.com/watch?v=8dxofcoRZnI" target="_blank" rel="noopener noreferrer">♬ <em>Without You</em> – Lana Del Rey</a></p>
+        </article>
+        <article class="pairing-item">
+          <p><strong><a href="https://www.imdb.com/title/tt4925292/" target="_blank" rel="noopener noreferrer">Lady Bird (2017)</a></strong> → <a href="https://www.youtube.com/watch?v=9Ed_WWmFy9I" target="_blank" rel="noopener noreferrer">♬ <em>American Teenager</em> – Ethel Cain</a></p>
+        </article>
+        <article class="pairing-item">
+          <p><strong><a href="https://www.imdb.com/title/tt5726616/" target="_blank" rel="noopener noreferrer">Call Me By Your Name (2017)</a></strong> → <a href="https://www.youtube.com/watch?v=JTeKpWp8Psw" target="_blank" rel="noopener noreferrer">♬ <em>Fourth of July</em> – Sufjan Stevens</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Harmony - Where Movies & Music Sync</p>
+  </footer>
+</body>
+</html>

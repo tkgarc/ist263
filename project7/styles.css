@@ -1,0 +1,149 @@
+
+body {
+    background-color: #f3cccc;
+    padding: 20px;
+    margin: 0;
+    color: #d14444;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  nav {
+    background-color: white;
+  border: 2px solid #d14444;
+  padding: 15px;
+  margin: 20px auto;
+  width: fit-content;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #d14444;
+  }
+  
+  header {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #fce1e1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  nav {
+    background-color: #d14444;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  nav li {
+    margin: 0 1rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover, nav a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+  }
+  nav a {
+    margin: 0 10px;
+  text-decoration: none;
+  color: #d14444;
+  font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  background-color: #d14444;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  }
+ 
+  a {
+    color: #d14444;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    background-color: #ffffff;
+    color: #d14444;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  
+  .genre-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .genre {
+    flex: 1 1 45%;
+    text-align: center;
+    background-color: #ffcccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+  
+  @media (max-width: 768px) {
+    .genre {
+      flex: 1 1 100%;
+    }
+  }
+  
+  .highlight-text {
+    background-color: #d14444;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: larger;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .hero {
+    text-align: center;
+    background-color: #d14444;
+    color: white;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  

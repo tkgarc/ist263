@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony - Movie Genres</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #d14444;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #f5f2f2;
+      color: #d14444;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #fce1e1;
+      margin-bottom: 1rem;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+    }
+    
+    nav {
+      background-color: #d14444;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    nav li {
+      margin: 0 1rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover, nav a:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      text-decoration: underline;
+    }
+    
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem 2rem;
+    }
+    
+    .header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .genre {
+      background-color: #f3cccc;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 2px solid #d14444;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .genre-image-container {
+      margin: 1rem 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .genre-image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .genre-pairings {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .duo-box {
+      background-color: #f2f2f2;
+      border: 1px solid #d14444;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .duo-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .duo-box a {
+      color: #d14444;
+      text-decoration: none;
+    }
+    
+    .duo-box a:hover, .duo-box a:focus {
+      text-decoration: underline;
+    }
+    
+    .highlight-text {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    footer {
+      background-color: #fce1e1;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes gentle-bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      
+      .bounce {
+        animation: gentle-bounce 2s ease infinite;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav li {
+        margin: 0.5rem 0;
+      }
+      
+      .genre {
+        padding: 1rem;}
+      
+      .genre-image-container img {
+        max-width: 90%;}
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="hero" role="banner">
+    <h1 class="bounce">Harmony</h1>
+    <p>Where movies & music sync!</p>
+  </header>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="pagetwo.html">Movie Genres</a></li>
+      <li><a href="pagethree.html" aria-current="page">Fun Extras</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="header">
+      <p>
+        Some movies have iconic soundtracks. Others <em>deserve</em> them. We've curated lists of songs that match
+        popular films based on emotion, tempo, and theme.
+      </p>
+    </section>
+
+    <section class="genre" aria-labelledby="romcom-title">
+      <h2 id="romcom-title" class="highlight-text">Romantic Comedies</h2>
+      <div class="genre-image-container">
+        <img src="media/romcoms.jpg" alt="Classic romantic comedy movie posters collage" />
+      </div>
+      <div class="genre-pairings">
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0147800/" target="_blank" rel="noopener noreferrer">10 Things I Hate About You (1999)</a> → <a href="https://www.youtube.com/watch?v=KfEEm4Zx-EU" target="_blank" rel="noopener noreferrer">♬ 505 – Arctic Monkeys</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0112697/" target="_blank" rel="noopener noreferrer">Clueless (1995)</a> → <a href="https://www.youtube.com/watch?v=nWAWQYH-EdU" target="_blank" rel="noopener noreferrer">♬ Milkshake – Kelis</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt3846674/" target="_blank" rel="noopener noreferrer">To All the Boys I've Loved Before (2018)</a> → <a href="https://www.youtube.com/watch?v=GzYSzV7Mltc" target="_blank" rel="noopener noreferrer">♬ Crush Culture – Conan Gray</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0454945/" target="_blank" rel="noopener noreferrer">She's The Man (2006)</a> → <a href="https://www.youtube.com/watch?v=FC3y9llDXuM" target="_blank" rel="noopener noreferrer">♬ Teenage Dirtbag – Wheatus</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="genre" aria-labelledby="drama-title">
+      <h2 id="drama-title" class="highlight-text">Dramas</h2>
+      <div class="genre-image-container">
+        <img src="media/drama.jpg" alt="Dramatic movie scenes collage" />
+      </div>
+      <div class="genre-pairings">
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt3783958/" target="_blank" rel="noopener noreferrer">La La Land (2016)</a> → <a href="https://www.youtube.com/watch?v=JgumMOMHpns" target="_blank" rel="noopener noreferrer">♬ Big Black Car – Gregory Alan Isakov</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0112697/" target="_blank" rel="noopener noreferrer">The Perks of Being a Wallflower (2012)</a> → <a href="https://www.youtube.com/watch?v=UmFFTkjs-O0" target="_blank" rel="noopener noreferrer">♬ Pictures of You – The Cure</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt1099212/" target="_blank" rel="noopener noreferrer">Twilight (2008)</a> → <a href="https://www.youtube.com/watch?v=nH7bjV0Q_44" target="_blank" rel="noopener noreferrer">♬ Work Song – Hozier</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt2267998/" target="_blank" rel="noopener noreferrer">Gone Girl (2014)</a> → <a href="https://www.youtube.com/watch?v=b-I2s5zRbHg" target="_blank" rel="noopener noreferrer">♬ You Know I'm No Good – Amy Winehouse</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="genre" aria-labelledby="scifi-title">
+      <h2 id="scifi-title" class="highlight-text">Thrillers & Sci-fi</h2>
+      <div class="genre-image-container">
+        <img src="media/scifi.jpg" alt="Science fiction and thriller movie scenes" />
+      </div>
+      <div class="genre-pairings">
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt1375666/" target="_blank" rel="noopener noreferrer">Inception (2010)</a> → <a href="https://www.youtube.com/watch?v=wycjnCCgUes" target="_blank" rel="noopener noreferrer">♬ Feels Like We Only Go Backwards – Tame Impala</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0246578/" target="_blank" rel="noopener noreferrer">Donnie Darko (2001)</a> → <a href="https://www.youtube.com/watch?v=q7qdpyjHyNk" target="_blank" rel="noopener noreferrer">♬ The Perfect Girl – Mareux</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt1856101/" target="_blank" rel="noopener noreferrer">Blade Runner 2049 (2017)</a> → <a href="https://www.youtube.com/watch?v=9XViPhRnOiQ" target="_blank" rel="noopener noreferrer">♬ Vanished – Crystal Castles</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt17526714/" target="_blank" rel="noopener noreferrer">The Substance (2024)</a> → <a href="https://www.youtube.com/watch?v=Kk8eJh4i8Lo" target="_blank" rel="noopener noreferrer">♬ Bulletproof – La Roux</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="genre" aria-labelledby="action-title">
+      <h2 id="action-title" class="highlight-text">Action & Adventure</h2>
+      <div class="genre-image-container">
+        <img src="media/action.jpg" alt="Action movie scenes with explosions and stunts" />
+      </div>
+      <div class="genre-pairings">
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0266697/" target="_blank" rel="noopener noreferrer">Kill Bill (2003)</a> → <a href="https://www.youtube.com/watch?v=OYB1rbL8EHo" target="_blank" rel="noopener noreferrer">♬ You Don't Own Me – Lesley Gore</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0468569/" target="_blank" rel="noopener noreferrer">The Dark Knight (2008)</a> → <a href="https://www.youtube.com/watch?v=f0pdwd0miqs" target="_blank" rel="noopener noreferrer">♬ Sextape – Deftones</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0499549/" target="_blank" rel="noopener noreferrer">Avatar (2009)</a> → <a href="https://www.youtube.com/watch?v=0lDvyER0E6Y" target="_blank" rel="noopener noreferrer">♬ The Songcord – Zoe Saldana</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt15239678/" target="_blank" rel="noopener noreferrer">Dune: Part Two (2024)</a> → <a href="https://www.youtube.com/watch?v=ihSHGr7rRhk" target="_blank" rel="noopener noreferrer">♬ Monolithic – Milord</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="genre" aria-labelledby="fantasy-title">
+      <h2 id="fantasy-title" class="highlight-text">Fantasy</h2>
+      <div class="genre-image-container">
+        <img src="media/fantasy.jpg" alt="Fantasy movie scenes with magical elements" />
+      </div>
+      <div class="genre-pairings">
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0304141/" target="_blank" rel="noopener noreferrer">Harry Potter and the Prisoner of Azkaban (2004)</a> → <a href="https://www.youtube.com/watch?v=d_HlPboLRL8" target="_blank" rel="noopener noreferrer">♬ Runaway – Aurora</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0120737/" target="_blank" rel="noopener noreferrer">The Lord of the Rings: The Fellowship of the Ring (2001)</a> → <a href="https://www.youtube.com/watch?v=Jl8iYAo90pE" target="_blank" rel="noopener noreferrer">♬ Caribbean Blue – Enya</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0327597/" target="_blank" rel="noopener noreferrer">Coraline (2009)</a> → <a href="https://www.youtube.com/watch?v=rtL5oMyBHPs" target="_blank" rel="noopener noreferrer">♬ Little Dark Age – MGMT</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt0347149/" target="_blank" rel="noopener noreferrer">Howl's Moving Castle (2004)</a> → <a href="https://www.youtube.com/watch?v=8Y2BHJIQFNY" target="_blank" rel="noopener noreferrer">♬ Once Upon A Dream – Invadable Harmony</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="genre" aria-labelledby="horror-title">
+      <h2 id="horror-title" class="highlight-text">Horror</h2>
+      <div class="genre-image-container">
+        <img src="media/horror.jpg" alt="Horror movie scenes with eerie elements" />
+      </div>
+      <div class="genre-pairings">
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt7784604/" target="_blank" rel="noopener noreferrer">Hereditary (2018)</a> → <a href="https://www.youtube.com/watch?v=Cr6dyKPOyTw" target="_blank" rel="noopener noreferrer">♬ Unfair – The Neighbourhood</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt5052448/" target="_blank" rel="noopener noreferrer">Get Out (2017)</a> → <a href="https://www.youtube.com/watch?v=SXmk8dbFv_o" target="_blank" rel="noopener noreferrer">♬ Run Rabbit Run – Flanagan & Allen</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt8772262/" target="_blank" rel="noopener noreferrer">Midsommar (2019)</a> → <a href="https://www.youtube.com/watch?v=froj2mh2WPM" target="_blank" rel="noopener noreferrer">♬ Choking on Flowers – Fox Academy</a>
+          </p>
+        </article>
+        <article class="duo-box">
+          <p>
+            🎬 <a href="https://www.imdb.com/title/tt18925334/" target="_blank" rel="noopener noreferrer">Pearl (2022)</a> → <a href="https://www.youtube.com/watch?v=3vjkh-acmTE" target="_blank" rel="noopener noreferrer">♬ Washing Machine Heart – Mitski</a>
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Which movie/song duo will you <strong>"press play"</strong> next?</p>
+
+    <h2 class="highlight-text"><strong><small>Page 2</small></strong></h2>
+  </footer>
+</body>
+
+</html>
